@@ -26,7 +26,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="font-body text-[0.6rem] text-muted">
-          © 2025 Scholars Elite — A Westview Group Program • 25+ Years Grassroots
+          © 2026 Scholars Elite — A Westview Group Program • 25+ Years Grassroots
           Experience
         </div>
       </div>

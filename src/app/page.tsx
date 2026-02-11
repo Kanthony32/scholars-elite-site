@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { TEAMS, STATS } from "@/lib/data";
 import {
-  Scanlines, Streak, Glass, Chip, Label, H2, Sub, Pill, Btn, Section, BList,
+  Scanlines, Streak, Glass, Chip, Label, H2, Sub, Pill, Btn, Section, BList, Noise,
 } from "@/components/ui";
 
 const TICKER = [
@@ -26,6 +26,7 @@ export default function HomePage() {
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-screen flex items-center bg-hero overflow-hidden pt-16">
         <Scanlines />
+        <Noise opacity={0.15} />
         <Streak top="15%" rot="-22deg" />
         <Streak top="65%" rot="-18deg" color="purple" />
 

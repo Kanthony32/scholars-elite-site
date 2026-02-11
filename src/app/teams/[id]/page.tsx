@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { TEAMS } from "@/lib/data";
-import { Scanlines, Streak, Glass, Label, H2, Pill, Btn, Section } from "@/components/ui";
+import { Scanlines, Streak, Glass, Label, H2, Pill, Btn, Section, Noise } from "@/components/ui";
 
 export function generateStaticParams() {
   return TEAMS.map((t) => ({ id: t.id }));
@@ -18,6 +18,7 @@ export default function TeamDetailPage({ params }: { params: { id: string } }) {
       {/* Hero */}
       <section className="relative pt-36 pb-20 px-6 bg-gradient-to-br from-bg0 to-bg1 overflow-hidden">
         <Scanlines />
+        <Noise opacity={0.15} />
         <Streak top="30%" color={t.track === "National" ? "magenta" : "purple"} />
         <div className="max-w-[1200px] mx-auto relative z-[2]">
           <div className="flex items-center gap-3 mb-3.5">

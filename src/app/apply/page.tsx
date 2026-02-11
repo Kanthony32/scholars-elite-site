@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { TEAMS } from "@/lib/data";
-import { Scanlines, Streak, Glass, Label, H2, Btn, Section } from "@/components/ui";
+import { Scanlines, Streak, Glass, Label, H2, Btn, Section, Noise } from "@/components/ui";
 
 export default function ApplyPage() {
   const [fm, setFm] = useState({ n: "", g: "", p: "", e: "", t: "", m: "" });
@@ -20,6 +20,7 @@ export default function ApplyPage() {
       {/* Hero */}
       <section className="relative pt-36 pb-20 px-6 bg-gradient-to-br from-bg0 to-bg1 overflow-hidden">
         <Scanlines />
+        <Noise opacity={0.15} />
         <Streak top="30%" />
         <div className="max-w-[1200px] mx-auto relative z-[2]">
           <Label>Join Us</Label>
@@ -105,7 +106,7 @@ export default function ApplyPage() {
               key={i}
               className={`flex gap-5 py-[18px] ${i < 3 ? "border-b border-border" : ""}`}
             >
-              <div className="font-display font-extrabold text-[1.4rem] gradient-text min-w-[36px]">
+              <div className="font-display font-extrabold text-[1.4rem] gradient-text bg-gradient-to-br from-magenta to-purple min-w-[36px]">
                 {n}
               </div>
               <p className="font-body text-[0.95rem] text-text2 leading-relaxed m-0">{t}</p>

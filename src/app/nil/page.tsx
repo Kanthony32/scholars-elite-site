@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Scanlines, Streak, Glass, Label, H2, Pill, Btn, Section } from "@/components/ui";
+import { Scanlines, Streak, Glass, Label, H2, Pill, Btn, Section, Noise } from "@/components/ui";
 
 export default function NILPage() {
   return (
@@ -7,6 +7,7 @@ export default function NILPage() {
       {/* Custom purple hero */}
       <section className="relative pt-36 pb-20 px-6 overflow-hidden" style={{ background: "linear-gradient(135deg, #070A12 0%, #0D0820 50%, #0B1020 100%)" }}>
         <Scanlines />
+        <Noise opacity={0.15} />
         <Streak top="20%" color="purple" />
         <Streak top="60%" />
         <div className="absolute top-[10%] left-[10%] w-[300px] h-[300px] border border-[rgba(156,39,176,0.12)] rounded-full opacity-30" />
